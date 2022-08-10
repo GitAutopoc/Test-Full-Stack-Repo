@@ -41,7 +41,7 @@ namespace PoliticalParties.Tests.TestCases
             {
                 testResults.TestCaseResults = JsonConvert.SerializeObject(testCaseResults);
                 var testResultsJson = JsonConvert.SerializeObject(testResults);
-                await _httpClient.PostAsync("https://yaksha-prod-sbfn.azurewebsites.net/api/YakshaMFAEnqueue?code=jSTWTxtQ8kZgQ5FC0oLgoSgZG7UoU9Asnmxgp6hLLvYId/GW9ccoLw==", new StringContent(testResultsJson, Encoding.UTF8, "application/json"));
+                await _httpClient.PostAsync("https://yaksha-stage-sbfn.azurewebsites.net/api/YakshaMFAEnqueue?code=JSssTES1yvRyHXshDwx6m405p0uSwbqnA937NaLAGX7zazwdLPC4jg==", new StringContent(testResultsJson, Encoding.UTF8, "application/json"));
             }
             return status;
         }
